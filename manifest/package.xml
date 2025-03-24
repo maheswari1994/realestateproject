@@ -5,6 +5,7 @@
         <members>TenantController</members>
         <members>AssignVendorOnMaintenanceRequest</members>
         <members>PropertyController</members>
+         <members>MapImageUpdater</members>
         <name>ApexClass</name>
     </types>  
     <types>
