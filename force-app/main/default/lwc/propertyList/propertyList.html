@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Property List">
+        <lightning-input type="number" label="Max Price" value={maxPrice} onchange={handleFilterChange}></lightning-input>
+        <lightning-input type="text" label="Status" value={status} onchange={handleFilterChange}></lightning-input>
+        <lightning-input type="text" label="Furnishing Status" value={furnishing} onchange={handleFilterChange}></lightning-input>
+        
+        <lightning-datatable key-field="Id" data={properties} columns={columns}></lightning-datatable>
+        
+        <lightning-button label="Previous" onclick={handlePrevious} disabled={disablePrev}></lightning-button>
+        <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button>
+    </lightning-card>
+</template>

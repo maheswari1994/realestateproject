@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Tenants List">
+        <template if:true={tenants}>
+            <template for:each={tenants} for:item="tenant">
+                <div key={tenant.Id} class="slds-box slds-m-around_small">
+                    <p><strong>{tenant.Name}</strong></p>
+                    <p>Phone: {tenant.Phone__c}</p>
+                    <p>Email: {tenant.Email__c}</p>
+                    <p>Assigned Properties:</p>
+                    <ul>
+                        <template for:each={tenant.Properties} for:item="property">
+                            <li key={property.Id}>{property.Name} - {property.Status__c}</li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
